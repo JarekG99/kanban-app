@@ -1,6 +1,109 @@
 body {
-  background-color: cornsilk;
-
+  background-color: #00b1db;
   font-family: sans-serif;
 }
+.lane-container {
+  max-width: 90vw;
+  margin: 40px auto;
+  background-color: #dee6ed;
+}
+.lane {
+  display: inline-block;
+  margin: 1em;
+  text-transform: uppercase;
+  background-color: #efefef;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  min-width: 10em;
+  vertical-align: top;
+}
 
+.lane-header {
+  overflow: auto;
+  padding: 1em;
+  color: #fff;
+  background-color: #aeaeae;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.lane-name {
+  float: left;
+}
+.lane-add-note {
+  float: left;
+  margin-right: 0.5em;
+}
+.lane-delete {
+  float: right;
+  margin-left: 0.5em;
+  visibility: hidden;
+}
+.lane-header:hover .lane-delete {
+  visibility: visible;
+}
+
+.add-lane {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  background-color: #00b1db;
+  border: 1px solid #000;
+  border-radius: 30%;
+  font-size: 1em;
+}
+.lane-add-note button{
+
+}
+.lane-delete button {
+  padding: 3px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 20%;
+}
+.add-note {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+}
+ .notes {
+  margin: 0.5em;
+  padding-left: 0;
+
+  max-width: 10em;
+  list-style: none;
+}
+
+.note {
+  overflow: auto;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.3);
+}
+.note:hover {
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.7);
+  transition: .6s;
+}
+
+.note .value {
+  /* force to use inline-block so that it gets minimum height */
+  display: inline-block;
+}
+
+.note .editable {
+  float: left;
+}
+.note .delete {
+  float: right;
+  padding: 3px;
+  background-color: #fdfdfd;
+  border: 1px solid #000;
+  border-radius: 30%;
+  cursor: pointer;
+  visibility: hidden;
+}
+.note:hover .delete {
+  visibility: visible;
+}
